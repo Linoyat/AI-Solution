@@ -2,11 +2,14 @@
 🌟 README.md — Embedding Indexer Project
 📌 תיאור הפרויקט
 
-הפרויקט מממש מודול פייתון המאפשר:
-קריאה של מסמכי DOCX או PDF
-חילוץ הטקסט הנקי מתוכן
+הפרויקט מממש תשתית מלאה הכוללת:
+קריאה של קבצי DOCX ו־PDF
+חילוץ טקסט נקי
 חלוקת המסמך למקטעים (Chunks) לפי פסקאות
-יצירת Embeddings לכל מקטע באמצעות מודל
+יצירת Embeddings לכל מקטע באמצעות Google Gemini
+שמירה של כל המקטעים והוקטורים במסד נתונים PostgreSQL
+המערכת נועדה לשמש בסיס לפיתוח חיפוש סמנטי, מערכות RAG, וכל יישום המתבסס על אחזור מידע באמצעות Vector Database.
+
 models/text-embedding-004 (Google Gemini API)
 
 שמירת כל המקטעים והוקטורים במסד נתונים PostgreSQL
@@ -15,12 +18,13 @@ models/text-embedding-004 (Google Gemini API)
 מבנה הפרויקט
 <img width="640" height="158" alt="image" src="https://github.com/user-attachments/assets/019ef74b-34ca-4c10-8e16-3997d30758e1" />
 
+יש לשנות את המשתנה input_file ל path במחשב הפרטי שלך לקובץ docx או pdf
 ⚙️ דרישות מערכת
 
 Python 3.10+
 PostgreSQL 16+
-
 חיבור אינטרנט ליצירת Embeddings מול Google Gemini API
+
 🏗️ התקנת הפרויקט
 1️⃣ התקנת ספריות נדרשות
 pip install python-docx PyPDF2 psycopg2-binary python-dotenv google-generativeai
@@ -33,6 +37,7 @@ pip install python-docx PyPDF2 psycopg2-binary python-dotenv google-generativeai
 
 GEMINI_API_KEY=your_api_key_here
 POSTGRES_URL=postgresql://username:password@localhost:5432/documents_db
+
 🗄️ מבנה מסד הנתונים PostgreSQL
 
 יש ליצור טבלה בשם embeddings:
@@ -45,17 +50,27 @@ CREATE TABLE embeddings (
     strategy_split TEXT,
     created_at TIMESTAMP DEFAULT NOW()
 );
+
 🚀 הרצת המערכת
+הפעלת המערכת
 
-פשוט מריצים:
-
+יש להגדיר את הנתיב לקובץ:
+input_file = "/path/to/your/document.pdf"
+הרצה:
 python index_documents.py
 
 
 הסקריפט יבצע:
-חילוץ תכנים מהמסמך
+חילוץ טקסט
+חלוקה למקטעים
 יצירת Embeddings
-שמירה של כל מקטע + וקטור בטבלה embeddings
+שמירה במסד הנתונים
+
+🧪 בדיקות לאחר ההרצה
+✔️ הטבלה embeddings קיימת
+✔️ כל המקטעים נשמרו
+✔️ הוקטורים נשמרו כ־JSON
+✔️ מספר השורות מתאים למספר ה־Chunks
 
 🛡️ הערות אבטחה
 אין לשמור API Keys בקוד.
