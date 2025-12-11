@@ -74,10 +74,15 @@ python index_documents.py
 📚 טכנולוגיות בשימוש
 
 Python (עיבוד טקסט ויצירת Embeddings)
+
 Google Gemini API (יצירת וקטורים)
+
 PostgreSQL (אחסון המקטעים והוקטורים)
+
 psycopg2 (תקשורת בין פייתון למסד הנתונים)
+
 python-docx, PyPDF2 (קריאת מסמכים)
+
 dotenv לניהול מפתחות API
 ✔️ סיכום
 
@@ -87,3 +92,10 @@ dotenv לניהול מפתחות API
 שימוש ב־Google Gemini ליצירת Embeddings
 שמירה יעילה במסד PostgreSQL
 עבודה בטוחה עם משתני סביבה
+
+מצ״ב דוגמאות לפלט תקין
+<img width="568" height="104" alt="image" src="https://github.com/user-attachments/assets/28992596-c3cf-4309-b6ce-9289632d7263" />
+<img width="2804" height="1482" alt="image" src="https://github.com/user-attachments/assets/603f805e-2fab-4039-b61f-321ddc4a501f" />
+
+
+
