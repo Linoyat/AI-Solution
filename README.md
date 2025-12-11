@@ -18,7 +18,7 @@ models/text-embedding-004 (Google Gemini API)
 מבנה הפרויקט
 <img width="640" height="158" alt="image" src="https://github.com/user-attachments/assets/019ef74b-34ca-4c10-8e16-3997d30758e1" />
 
-יש לשנות את המשתנה input_file ל path במחשב הפרטי שלך לקובץ docx או pdf
+
 ⚙️ דרישות מערכת
 
 Python 3.10+
