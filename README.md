@@ -1,6 +1,6 @@
 # AI-Solution
 🌟 README.md — Embedding Indexer Project
-#📌 תיאור הפרויקט
+📌 תיאור הפרויקט
 
 הפרויקט מממש מודול פייתון המאפשר:
 
@@ -23,7 +23,7 @@ project-folder/
 ├── index_documents.py     # קובץ הפייתון הראשי
 ├── .env                   # משתני סביבה (לא מועלה ל-Git)
 └── README.md              # תיעוד הפרויקט
-#⚙️ דרישות מערכת
+⚙️ דרישות מערכת
 
 Python 3.10+
 
@@ -42,7 +42,7 @@ pip install python-docx PyPDF2 psycopg2-binary python-dotenv google-generativeai
 
 GEMINI_API_KEY=your_api_key_here
 POSTGRES_URL=postgresql://username:password@localhost:5432/documents_db
-#🗄️ מבנה מסד הנתונים PostgreSQL
+🗄️ מבנה מסד הנתונים PostgreSQL
 
 יש ליצור טבלה בשם embeddings:
 
@@ -54,7 +54,7 @@ CREATE TABLE embeddings (
     strategy_split TEXT,
     created_at TIMESTAMP DEFAULT NOW()
 );
-#🚀 הרצת המערכת
+🚀 הרצת המערכת
 
 פשוט מריצים:
 
@@ -93,7 +93,7 @@ python index_documents.py
 
 שמספר השורות בטבלה תואם למספר ה־Chunks
 
-##📚 טכנולוגיות בשימוש
+📚 טכנולוגיות בשימוש
 
 Python (עיבוד טקסט ויצירת Embeddings)
 
@@ -106,7 +106,7 @@ psycopg2 (תקשורת בין פייתון למסד הנתונים)
 python-docx, PyPDF2 (קריאת מסמכים)
 
 dotenv לניהול מפתחות API
-#✔️ סיכום
+✔️ סיכום
 
 הפרויקט מדגים תהליך מלא של:
 
