@@ -21,12 +21,15 @@ models/text-embedding-004 (Google Gemini API)
 
 ⚙️ דרישות מערכת
 
+
 Python 3.10+
 PostgreSQL 16+
 חיבור אינטרנט ליצירת Embeddings מול Google Gemini API
 
 🏗️ התקנת הפרויקט
+
 1️⃣ התקנת ספריות נדרשות
+
 pip install python-docx PyPDF2 psycopg2-binary python-dotenv google-generativeai
 
 🔐 קובץ .env — הגדרת משתני סביבה
@@ -52,6 +55,7 @@ CREATE TABLE embeddings (
 );
 
 🚀 הרצת המערכת
+
 הפעלת המערכת
 
 יש להגדיר את הנתיב לקובץ:
@@ -67,12 +71,14 @@ python index_documents.py
 שמירה במסד הנתונים
 
 🧪 בדיקות לאחר ההרצה
+
 ✔️ הטבלה embeddings קיימת
 ✔️ כל המקטעים נשמרו
 ✔️ הוקטורים נשמרו כ־JSON
 ✔️ מספר השורות מתאים למספר ה־Chunks
 
 🛡️ הערות אבטחה
+
 אין לשמור API Keys בקוד.
 אין לשמור סיסמאות מסד נתונים בגוף הסקריפט.
 כל פרטי החיבור צריכים להופיע בקובץ .env בלבד.
@@ -80,6 +86,7 @@ python index_documents.py
 הקפיד לא לשתף את כתובת החיבור המלאה (POSTGRES_URL) עם אחרים.
 
 🧪 בדיקות ואימות
+
 לאחר הרצת index_documents.py, יש לבדוק:
 שהטבלה embeddings נוצרה בהצלחה במסד הנתונים
 שכל מקטע טקסט נשמר
@@ -87,6 +94,7 @@ python index_documents.py
 שמספר השורות בטבלה תואם למספר ה־Chunks
 
 📚 טכנולוגיות בשימוש
+
 
 Python (עיבוד טקסט ויצירת Embeddings)
 
