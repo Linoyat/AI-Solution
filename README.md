@@ -1,6 +1,8 @@
 # AI-Solution
 🌟 README.md — Embedding Indexer Project
+
 📌 תיאור הפרויקט
+
 
 הפרויקט מממש תשתית מלאה הכוללת:
 קריאה של קבצי DOCX ו־PDF
